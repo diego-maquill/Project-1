@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Food Inner css -->
+    <link rel="stylesheet" href="./assets/sytlesheets/foodInnerPageCss/foodInnerPage.css">
+
+    <title>nuBie</title>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <h1 class="navBarLogo">nuBie</h1>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="./index.html">Home </a>
+                <!-- <a class="nav-item nav-link" href="./homes.html">Find Homes</a> -->
+                <a class="nav-item nav-link" href="./jobs.html">nuHire</a>
+                <a class="nav-item nav-link" href="./events.html">outNabout</a>
+                <a class="nav-item nav-link" href="./food.html">nuBites</a>
+            </div>
+
+            <!-- Button trigger modal -->
+            <div class="navButtons">
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#singUp">
+                    Sing Up
+                </button>
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#logIn">
+                    Log In
+                </button>
+            </div>
+        </nav>
+    </div>
+    <!------ NavBar END ------>
+
+
+    <!------ Modal for Sign UP--------->
+    <div class="modal fade" id="singUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div>
+                        <label for="exampleFormControlSelect1">Full Name</label>
+                        <input class="form-control" type="text" placeholder="Please Enter Your Full Name" id="userName">
+                    </div>
+
+                    <div>
+                        <label for="exampleFormControlSelect1">Email</label>
+                        <input class="form-control" type="email" placeholder="Please Enter Your Email" id="userEmail">
+                    </div>
+
+                    <div>
+                        <label for="exampleFormControlSelect1">Password</label>
+                        <input class="form-control" type="password" placeholder="Please Enter Your Password"
+                            id="userPassword">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="signUpBtnPressed">Sing Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------- Modal for LogIn ------>
+    <div class="modal fade" id="logIn">
+        <div class="modal-body">
+            <div class="contrainer">
+                <div class="row signUpForm">
+                    <div class="col-md-12">
+
+                        <button type="button" class="close text-white" aria-label="Close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <h2 class="text-center">Log In</h2>
+                        <label class="label control-label">User Name or Email</label>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" class="form-control" name="Name" placeholder="User Name or Email">
+                        </div>
+
+                        <label class="lable control-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="Password" class="form-control" name="Password" placeholder="Password">
+                        </div>
+
+                        <a>
+                            <div class="btn btn-outline-sucess">LOG IN</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------- /Modal END/------------------->
+
+
+
+
+    <div class="container-fluid">
+        <div class="row" id="foodHeader">
+            <div class="col-md-12 foodSearchHeader">
+                <!-- input tabs for seach -->
+                <form class="foodSearchTabs foodSearchHeader">
+
+                    <div class="form-row">
+                        <div class="col" id="foodLogo">
+                            <h1>nuBite</h1>
+                        </div>
+
+                        <!-- City Or Location Search Input -->
+                        <div class="col-3">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">📍</span>
+                                </div>
+                                <input type="text" class="form-control zipCode" id="city" iplaceholder="Locaiton...">
+                            </div>
+                        </div>
+
+                        <!-- Restaurant or Cuisine Search Input  -->
+                        <div class="col-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">🔍</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search for restaurants or cuisines"
+                                    id="food-type">
+                            </div>
+                        </div>
+
+                        <!-- Search Btn Submit -->
+                        <div class="foodSrcBtn text-center">
+                            <button class="btn btn-success" id="search">Search</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- food Results -->
+    <div id="foodBottomGrid">
+
+        <!-- TEST Card to see CSS restuls with Running JS -->
+        <!-- <div class="card restCards">
+            <div class="card-body">
+                <h6 class="rating" id="restRating"></h6>
+                <h5 class="card-title" id="restName"></h5>
+                <h6 class="votes text-muted">otes</h6>
+                <h6 class="card-subtitle" id="cityName"></h6>
+                <p class="card-text text-muted" id="fullAddress"></p>
+                <hr>
+                <p class="text-muted" id="cuisene">Cuisines:</p>
+                <p class="text-muted" id="costForTwo">Cost for two: \$</p>
+                <hr>
+               <a href="${restaurante.restaurant.menu_url}" class="menuBtn"><button type="button" class="btn btn-outline-secondary">📝View Menu</button>
+                </a>
+            </div>
+        </div> -->
+
+
+    </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Food API js -->
+    <script src="./assets/JavaScript/foodJS/food.js"></script>
+
+</body>
+
+</html>

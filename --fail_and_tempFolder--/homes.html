@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Our CCS file -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- SignUP Form Css -->
+    <link rel="stylesheet" href="./SignUPform.css">
+    <!-- BootStrap link file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>nuBie</title>
+</head>
+
+<body>
+
+
+    <!-- NavBar -->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <h1 class="navBarLogo">nuBie</h1>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="./index.html">Home </a>
+                <a class="nav-item nav-link" href="./homes.html">Find Homes</a>
+                <a class="nav-item nav-link" href="./jobs.html">Find Jobs</a>
+                <a class="nav-item nav-link" href="./activityAndFood.html">Find Activities and Local Food</a>
+                <a class="nav-item nav-link" href="./food.html">Food</a>
+            </div>
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#singUp">
+                Sing Up
+            </button>
+            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#logIn">
+                Log In
+            </button>
+    </div>
+    <!------ NavBar END ------>
+
+
+    <!------ Modal for Sign UP--------->
+    <div class="modal fade" id="singUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div>
+                        <label for="exampleFormControlSelect1">Full Name</label>
+                        <input class="form-control" type="text" placeholder="Please Enter Your Full Name" id="userName">
+                    </div>
+
+                    <div>
+                        <label for="exampleFormControlSelect1">Email</label>
+                        <input class="form-control" type="email" placeholder="Please Enter Your Email" id="userEmail">
+                    </div>
+
+                    <div>
+                        <label for="exampleFormControlSelect1">Password</label>
+                        <input class="form-control" type="password" placeholder="Please Enter Your Password"
+                            id="userPassword">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="signUpBtnPressed">Sing Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------- Modal for LogIn ------>
+    <div class="modal fade" id="logIn">
+        <div class="modal-body">
+            <div class="contrainer">
+                <div class="row signUpForm">
+                    <div class="col-md-12">
+
+                        <button type="button" class="close text-white" aria-label="Close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <h2 class="text-center">Log In</h2>
+                        <label class="label control-label">User Name or Email</label>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" class="form-control" name="Name" placeholder="User Name or Email">
+                        </div>
+
+                        <label class="lable control-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="Password" class="form-control" name="Password" placeholder="Password">
+                        </div>
+
+                        <a>
+                            <div class="btn btn-outline-sucess">LOG IN</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------- /Modal END/------------------->
+
+
+
+    <!-- ----------------------------------------/ Homes Page Main Section Design /------------------------------ -->
+    <div class="main1">
+        <div class="box1">
+            <!-- Google Maps API -->
+            <div id="map"></div>
+        </div>
+
+        <!-- Search Form -->
+        <div class="box2">
+            <form class="text-center" id="homeSearch">
+                <!-- Search form -->
+                <p class="h4 mb-4">Find Real Estate Listings</p>
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+
+
+                <select class="browser-default custom-select">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+
+                <select class="browser-default custom-select">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+
+                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
+                    type="submit">Sign in</button>
+            </form>
+        </div>
+
+        <div class="box3">
+
+        </div>
+    </div>
+    <!-- ----------------------------------------/ Homes Page Main Section Design END/------------------------------ -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ------------------------------------------ Scripts------------------------------------------ -->
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvUexpwabXjYGj11ANh2Bv28gsYWvCfKI&callback=initMap"
+        async defer></script>
+
+
+    <!--jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+
+    <!-- BootStrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="./LocalScripts/mdb.js"></script>
+    <!-- <script src="./firebase.js"></script> -->
+
+    <!-- Firebase API -->
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
+
+    <!-- Main JS Script file -->
+    <script src="./scrip.js"></script>
+    <!-- ------------------------------------------ Scripts------------------------------------------ -->
+
+</body>
+
+</html>

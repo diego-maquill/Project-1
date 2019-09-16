@@ -1,0 +1,55 @@
+.eventMainBody{
+    background: url(../../pictures/EventPage/eventMainPage.jpg)  no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.navBarLogo{
+    color: white;
+}
+
+#eventsMainPageSection{
+    position: relative;
+}
+
+#eventLogo{
+   color: white;
+   border: 1px solid white;
+   background: black;
+   padding: 20px;
+   width: 300px;
+   text-align: center;
+   border-radius: 5px;
+   margin-top: 10%;
+   margin-left: 45%;
+}
+
+
+.searcLabelsMainEvent{
+    margin: 30px;
+    width: 400px; 
+  
+}
+
+input{
+    margin: 15px;
+    text-align: center;
+}
+
+.eventType{
+    margin-left: 140%;
+    text-align: center;
+}
+
+.cityPick{
+    margin-left: 120%;
+}
+
+.datePick{
+    margin-left: 100%;
+}
+
+.searchBtn{
+    margin-left: 100%;
+    width: 200px;
+}

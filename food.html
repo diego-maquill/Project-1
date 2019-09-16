@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="./assets/sytlesheets/MAIN_CSS/main.css">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
+
+    <title>nuBie</title>
+</head>
+
+<body class="foodBody">
+    <!-- NavBar -->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <h1 class="navBarLogo">nuBie</h1>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link navLinks" href="./index.html">Home </a>
+                <!-- <a class="nav-item nav-link" href="./homes.html">Find Homes</a> -->
+                <a class="nav-item nav-link" href="./jobs.html">nuHire</a>
+                <a class="nav-item nav-link" href="./eventMainPage.html">outNabout</a>
+                <a class="nav-item nav-link" href="./food.html">nuBites</a>
+            </div>
+
+            <!-- Button trigger modal -->
+            <div class="navButtons">
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#singUp">
+                    Sing Up
+                </button>
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#logIn">
+                    Log In
+                </button>
+            </div>
+        </nav>
+    </div>
+    <!------ NavBar END ------>
+
+
+    <!------ Modal for Sign UP--------->
+    <div class="modal fade" id="singUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div>
+                        <label for="exampleFormControlSelect1">Full Name</label>
+                        <input class="form-control" type="text" placeholder="Please Enter Your Full Name" id="userName">
+                    </div>
+
+                    <div>
+                        <label for="exampleFormControlSelect1">Email</label>
+                        <input class="form-control" type="email" placeholder="Please Enter Your Email" id="userEmail">
+                    </div>
+
+                    <div>
+                        <label for="exampleFormControlSelect1">Password</label>
+                        <input class="form-control" type="password" placeholder="Please Enter Your Password"
+                            id="userPassword">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="signUpBtnPressed">Sing Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------- Modal for LogIn ------>
+    <div class="modal fade" id="logIn">
+        <div class="modal-body">
+            <div class="contrainer">
+                <div class="row signUpForm">
+                    <div class="col-md-12">
+
+                        <button type="button" class="close text-white" aria-label="Close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <h2 class="text-center">Log In</h2>
+                        <label class="label control-label">User Name or Email</label>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" class="form-control" name="Name" placeholder="User Name or Email">
+                        </div>
+
+                        <label class="lable control-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="Password" class="form-control" name="Password" placeholder="Password">
+                        </div>
+
+                        <a>
+                            <div class="btn btn-outline-sucess">LOG IN</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------- /Modal END/------------------->
+
+
+
+
+    <div class="container-fluid">
+        <div class="row" id="foodHeader">
+            <div class="col-md-12 foodSearchHeader">
+                <!-- food Logo -->
+                <div id="foodLogo">
+                    <h1>nuBite</h1>
+                </div>
+
+                <!-- -->
+                <div class="text-center searchLable">
+                    <h1>Find the best Restaurants, Café and Bars</h1>
+                </div>
+
+                <!-- input tabs for seach -->
+                <form class="foodSearchTabs">
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">📍</span>
+                                </div>
+                                <input type="text" class="form-control" id="city" placeholder="Locaiton..."
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">🔍</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search for restaurants or cuisines"
+                                    id="food-type">
+                            </div>
+                        </div>
+                        <div class="foodSrcBtn text-center">
+                            <!-- <a class="btn btn-success" onclick="ajaxCallandSearch()" href="./foodInnerPage.html"
+                                id="search">Search</a href="./foodInnerPage.html"> -->
+                            <button class="btn btn-success" id="search" onclick="redirect()">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Page After Search -->
+    <!-- Top Lable and Pics  -->
+    <div class="bottomSeciton">
+        <div class="bottomTop">
+            <div class="bottomTopLeft">
+                <div class="pic">
+                    <img class="topLeftCss" src="./assets/pictures/FoodPage/icons_restaurants_tl_2x.png" alt="">
+                </div>
+                <div>
+                    <h3 class="topTextLable">Find the best places to eat</h3>
+                    <p>Restaurants - everything from street food to the fine dining</p>
+                </div>
+            </div>
+
+            <div class="bottomTopRight">
+                <div class="pic">
+                    <img class="topRightCss" src="./assets/pictures/FoodPage/icon_bookRestaurants_tl_2x.png" alt="">
+                </div>
+                <div>
+                    <h3 class="topTextLable">See Restaurants Scores</h3>
+                    <p>Restaurants cuisines, menus and addresses</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sliderPics">
+        <h1 class="middleLableFood">Top 3 Pics of the Month</h1>
+
+        <div class="videoGrid">
+            <div class="leftVideo">
+                <video class="videos" src="./assets/pictures/FoodPage/videos/Kamel Restaurant _ Promo Video.mp4"
+                    controls muted autoplay loop></video>
+            </div>
+
+            <div class="leftVideo">
+                <video class="videos" src="./assets/pictures/FoodPage/videos/Tangerine bar Promo Video.mp4" controls
+                    muted autoplay loop></video>
+            </div>
+
+            <div class="leftVideo">
+                <video class="videos" src="./assets/pictures/FoodPage/videos/Insomnia - Restaurant Promo Video.mp4"
+                    controls muted autoplay loop></video>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- icons pack -->
+    <!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> -->
+
+    <script src="./assets/JavaScript/indexPageJS/scrip.js"></script>
+
+    <!-- Food API js -->
+    <script src="./food.js"></script>
+    <script>
+        $("#search").on("click", function (event) {
+            event.preventDefault();
+            var city = $("#city").val();
+            var foodType = $("#food-type").val();
+            window.location.href = `./foodInnerPage.html?city=${city}&foodType=${foodType}`;
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+var apiKey = '74b8c51009067028679f28e79ef8dbd2';
+var queryURL = `https://developers.zomato.com/api/v2.1/search?q=${foodType}%2B${city}&radius=${areaRadious}&user-key=${key}` -->

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nuBie</title>
+    <!-- bootstrap css cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Main CSS -->
+    <!-- <link rel="stylesheet" href="./assets/sytlesheets/MAIN_CSS/main.css"> -->
+    <link rel="stylesheet" href="./assets/sytlesheets/evetnsCSS/mainEventPage.css">
+    <!-- Scrolling Effect -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
+</head>
+
+<body class="eventMainBody">
+
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <h1 class="navBarLogo">nuBie</h1>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="./index.html">Home </a>
+                <!-- <a class="nav-item nav-link" href="./homes.html">Find Homes</a> -->
+                <a class="nav-item nav-link" href="./jobs.html">nuHire</a>
+                <a class="nav-item nav-link" href="./eventMainPage.html">outNabout</a>
+                <a class="nav-item nav-link" href="./food.html">nuBites</a>
+            </div>
+
+            <!-- Button trigger modal -->
+            <div class="navButtons">
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#singUp">
+                    Sing Up
+                </button>
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#logIn">
+                    Log In
+                </button>
+            </div>
+        </nav>
+    </div>
+
+
+    <div id="eventsMainPageSection">
+
+        <div id="eventLogo">
+            <h1>outNabout</h1>
+        </div>
+
+
+        <div class="searcLabelsMainEvent">
+
+            <input type="text" class="form-control bg-dark eventType" id="searchTitle"
+                placeholder="Search for specific Envent">
+
+            <input type="text" class="form-control bg-dark cityPick" id="searchCity" placeholder="Pick City">
+
+            <input type="date" class="form-control bg-dark datePick" id="searchDate">
+
+            <button class="btn btn-outline-secondary searchBtn">Search</button>
+
+        </div>
+
+
+        </di>
+
+
+
+        <!-- bootstrap js cdn -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <!-- jquery cdn -->
+        <script src="./events.js"></script>
+        <script src="./assets/JavaScript/indexPageJS/scrip.js"></script>
+        <script>
+            $(".searchBtn").on("click", function (event) {
+                event.preventDefault();
+                var city = $("#searchCity").val();
+                var event = $("#searchTitle").val();
+                var date = $('#searchDate').val();
+                window.location.href = `./events.html?searchTitle=${event}&searchCity=${city}&searchDate${date}`;
+            });
+        </script>
+
+</body>
+
+</html>

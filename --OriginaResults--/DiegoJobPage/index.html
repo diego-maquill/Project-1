@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Newbiw.com</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo-wrap">
+                <a class="logo" href="/"> </a>
+            </div>
+        </div>
+    </header>
+    <div class="banner-interior"></div>
+    <div class="main grid">
+        <div class="container">
+            <div class="row">
+                <div class="col9">
+                    <div class="page">
+                        <article class="content">
+                            <header class="page-header">
+                                <h1 class="page-title">Find a Job</h1>
+                            </header>
+                            <p>Find your job in Newbie.com
+                            </p>
+                            <h2>Start Your Search Here.</h2>
+                            <div id="job-search">
+                                <form action="" method="post" accept-charset="utf-8">
+                                    <div class="field">
+                                        <label for="keywords">Job Keywords</label>
+                                        <input type="text" id="keywords" name="keywords" value="" required autofocus />
+                                    </div>
+                                    <div class="field">
+                                        <input type="submit" value="Search Now">
+                                    </div>
+                                </form>
+                                <div id="job-results">
+                                    <div id="job-results-set"></div>
+                                    <div id="job-results-pagination"></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="grid">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="./appDiegojob.js"></script>
+    <script src="./paging_sortingDiego.js"></script>
+    <script id="job-result" type="text/x-jquery-tmpl">
+        <article class="job-search-result">
+            <a href="${url}" target="_blank">
+            <h2>${company}</h2>
+            <div><strong>Position:</strong> ${jobtitle}</div>
+            <div><strong>Location:</strong> ${formattedLocationFull}</div>
+            <div><strong>Job Posted:</strong> ${formattedRelativeTime}</div>
+            <div class="distance" data-lat="${latitude}" data-lon="${longitude}"><strong>Distance:</strong> </div>
+            <div>
+                <strong>Description:</strong> {{html snippet}}
+            </div>
+            </a>
+        </article>
+    </script>
+</body>
+
+</html>
