@@ -95,7 +95,7 @@ $(function () {
                 }, params),
                 dataType: 'jsonp',
                 type: 'GET',
-                timeout: 5000,
+                timeout: 50000,
                 url: 'http://api.indeed.com/ads/apisearch'
             }).done(done).fail(fail);
         };
