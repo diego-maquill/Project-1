@@ -75,6 +75,7 @@ $(function () {
         var doSearch = function (params, done, fail) {
             //console.log('Searching with params', params);
             $.ajax({
+
                 cache: false,
                 dataType: 'jsonp',
                 data: $.extend({
@@ -92,11 +93,13 @@ $(function () {
                     filter: 1,
                     latlong: 1,
                     co: 'us',
+                    userip: '73.123.230.230',
+                    useragent: 'Mozilla'
                 }, params),
                 dataType: 'jsonp',
                 type: 'GET',
-                timeout: 50000,
-                url: 'http://api.indeed.com/ads/apisearch'
+                timeout: 5000,
+                url: 'https://api.indeed.com/ads/apisearch'
             }).done(done).fail(fail);
         };
 
