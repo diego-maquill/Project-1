@@ -10,10 +10,6 @@ $(function () {
             $resultLinks = $result.find('#job-results-pagination'),
             $resultTemplate = $('#testDiv').template();
 
-
-
-
-
         var toRad = function (degree) {
             rad = degree * Math.PI / 180;
             return rad;
